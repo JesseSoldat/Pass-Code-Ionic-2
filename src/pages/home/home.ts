@@ -11,4 +11,12 @@ export class HomePage {
 
   }
 
+  onTap(){
+
+  }
+
+  onPress() {
+  	
+  }
+
 }
