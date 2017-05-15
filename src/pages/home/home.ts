@@ -19,7 +19,21 @@ export class HomePage {
   }
 
   didWin() {
-  	return false;
+  	return this.tapped == 2 && this.pressed == 4;
+  }
+
+  onDidReset(resetType: string) {
+  	switch (resetType) {
+  		case 'tap':
+  			this.tapped = 0;
+  			break;
+  		case 'press':
+  			this.pressed = 0;
+  			break;
+  		default:
+  			this.tapped = 0;
+  			this.pressed = 0;
+  	}
   }
 
 }

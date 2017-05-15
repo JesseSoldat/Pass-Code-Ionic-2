@@ -27,11 +27,11 @@
 				</ion-list>
 			</ion-col>
 		</ion-row>
-  	<app-reset></app-reset>
+  	<app-reset (didReset)="onDidReset($event)"></app-reset>
 		<ion-row>
 			<ion-col style="background: lightgreen" text-center
 				(tap)="onTap()">Tap here</ion-col>
-			<ion-col style="background: lightgreen" text-center
+			<ion-col offset-1 style="background: lightgreen" text-center
 				(tap)="onPress()">Press here</ion-col>
 		</ion-row>
 	</ion-grid>
