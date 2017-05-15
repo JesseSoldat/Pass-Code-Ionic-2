@@ -11,22 +11,23 @@
 		<ion-row>
 			<ion-col text-center>
 				<h3>Enter the correct Code</h3>
-				<p>Tap twice, press four times</p>
+				<p *ngIf="!didWin()">Tap twice, press four times</p>
+				<p *ngIf="didWin()">You unlocked the code!</p>
 			</ion-col>
 		</ion-row>
 		<ion-row>
 			<ion-col>
 				<ion-list>
 					<ion-item>
-						<p>Tapped: </p>
+						<p>Tapped: {{tapped}}</p>
 					</ion-item>
 					<ion-item>
-						<p>Pressed</p>
+						<p>Pressed: {{pressed}}</p>
 					</ion-item>
 				</ion-list>
 			</ion-col>
 		</ion-row>
-
+  	<app-reset></app-reset>
 		<ion-row>
 			<ion-col style="background: lightgreen" text-center
 				(tap)="onTap()">Tap here</ion-col>
@@ -34,5 +35,4 @@
 				(tap)="onPress()">Press here</ion-col>
 		</ion-row>
 	</ion-grid>
-  
 </ion-content>
